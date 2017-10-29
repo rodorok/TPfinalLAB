@@ -1,20 +1,18 @@
 #ifndef ARBOL_H_INCLUDED
 #define ARBOL_H_INCLUDED
-
+#include"cliente.h"
 typedef struct {
-    int dato;
+    persona p;
     struct nodoArbol *izq;
     struct nodoArbol *der;
 }nodoArbol;
 
 ///Funciones
 nodoArbol * inicArbol();
-nodoArbol * crearNodoArbol(int dato);
-nodoArbol * insertar(nodoArbol * arbol, int dato);
+nodoArbol * crearNodoArbol(persona a);
+nodoArbol * insertar(nodoArbol * arbol, persona a);
 void preorder(nodoArbol * arbol);
 void inorder(nodoArbol * arbol);
 void postorder(nodoArbol * arbol);
-nodoArbol * buscar(nodoArbol * arbol, int dato);
-
-
+nodoArbol * buscar(nodoArbol * arbol, char nombre[10]);
 #endif // ARBOL_H_INCLUDED

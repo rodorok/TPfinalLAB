@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1509117588 source:c:\users\maxi\desktop\practica\toledo\main.c
+	<stdio.h>
+	<stdlib.h>
+	"cliente.h"
+	"menus.h"
+
+1509110765 c:\users\maxi\desktop\practica\toledo\cliente.h
+
+1509116221 source:c:\users\maxi\desktop\practica\toledo\cliente.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+
+1509117680 source:c:\users\maxi\desktop\practica\toledo\menus.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"menus.h"
+
+1509106813 c:\users\maxi\desktop\practica\toledo\menus.h
+
+1509116113 source:c:\users\maxi\desktop\practica\toledo\arbol.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"arbol.h"
+
+1509110751 c:\users\maxi\desktop\practica\toledo\arbol.h
+	"cliente.h"
+
+1509116366 source:c:\users\maxi\desktop\practica\toledo\lista.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+
+1509116276 c:\users\maxi\desktop\practica\toledo\lista.h
+	"cliente.h"
+
