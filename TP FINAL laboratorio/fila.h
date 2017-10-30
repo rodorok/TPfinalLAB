@@ -2,19 +2,10 @@
 #define FILA_H_INCLUDED
 
 typedef struct{
-    int nro_de_caja;
-    char nombreCajero[40];
-    int tipo_pago;                 //  1 efectivo, 2 crédito o débito, 3 todos
-    int abiertaOcerrada;
-    char algoritmoPlanificacion[30];  // debe informar que tipo de alg. de planificación utiliza la caja
-    Fila filita ;
-}caja;
-
-typedef struct nodo{
-    caja datos_caja;
+    persona filita;
     struct cajero * siguiente;
     struct cajero * anterior;
-} cajero;
+}fila_caja;
 
 typedef struct{
     struct caja * cabecera;
