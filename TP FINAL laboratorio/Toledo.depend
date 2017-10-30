@@ -49,7 +49,7 @@
 
 1509110765 d:\github\utn\tpfinallab\tp final laboratorio\cliente.h
 
-1509116366 source:d:\github\utn\tpfinallab\tp final laboratorio\lista.c
+1509367562 source:d:\github\utn\tpfinallab\tp final laboratorio\lista.c
 	<stdio.h>
 	<stdlib.h>
 	"lista.h"
@@ -76,4 +76,11 @@
 	<stdlib.h>
 	<string.h>
 	"cliente.h"
+
+1509376810 source:d:\github\utn\tpfinallab\tp final laboratorio\caja.c
+	<stdlib.h>
+	<string.h>
+	"caja.h"
+
+1509376810 d:\github\utn\tpfinallab\tp final laboratorio\caja.h
 

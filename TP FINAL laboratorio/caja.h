@@ -1,4 +1,4 @@
-#ifndef CAJA_H_INCLUDED
+/*#ifndef CAJA_H_INCLUDED
 #define CAJA_H_INCLUDED
 
 ///Estructura de caja
@@ -14,3 +14,4 @@ typedef struct{
 
 
 #endif // CAJA_H_INCLUDED
+*/

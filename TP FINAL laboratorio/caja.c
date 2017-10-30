@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "caja.h"
@@ -41,4 +41,4 @@ void datos_caja(cajas c[]){
             scanf("%c",&c.algoritmoPlanificacion);
             printf("\n");
             c.filita = NULL;
-}
+*/
