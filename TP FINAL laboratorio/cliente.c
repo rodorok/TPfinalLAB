@@ -37,6 +37,7 @@ void cargapersona(char archivitopers[])
         } ///switch principal
     }while ( opcion != 27 );  ///FIN DEL DO-WHILE
 
+
 }
 int reg_usuario (char nombarchi [],int num)
 {  system("cls");

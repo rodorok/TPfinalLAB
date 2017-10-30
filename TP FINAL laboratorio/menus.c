@@ -69,7 +69,7 @@ char opcion;
         {
             case 49:system("cls");
                      arbol=archivoarbol(archivitopers,arbol);
-                     printf("ARBOL CARGADO EXITOSAMENTE");
+                     printf("\t\t ARBOL CARGADO EXITOSAMENTE");
                     printf("\n\n\n");
                     system("pause");
                 system("cls");
@@ -83,7 +83,7 @@ char opcion;
                     break;
             case 51:
                 system("cls");
-                    printf("Abre");
+                    printf("EXPLOTO EL ARBOL");
                     printf("\n\n\n");
                     system("pause");
                     system("cls");

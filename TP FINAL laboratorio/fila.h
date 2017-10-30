@@ -1,17 +1,16 @@
 #ifndef FILA_H_INCLUDED
 #define FILA_H_INCLUDED
-typedef struct
-{
-    int dato;
-    struct nodo2* siguiente;
-    struct nodo2* anterior;
-} nodo2;
 
-typedef struct
-{
-    struct nodo2* cabecera;
-    struct nodo2* cola;
-} Referencia;
+typedef struct{
+    persona filita;
+    struct cajero * siguiente;
+    struct cajero * anterior;
+}fila_caja;
+
+typedef struct{
+    struct caja * cabecera;
+    struct caja * cola;
+}fila;
 
 void inicReferencia(Referencia* fila);
 nodo2* crearNodo(int dato);
