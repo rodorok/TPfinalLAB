@@ -3,6 +3,7 @@
 #include <string.h>
 #include "cliente.h"
 
+
 void cargapersona()
 {
     char opcion;
