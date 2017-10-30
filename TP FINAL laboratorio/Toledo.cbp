@@ -39,6 +39,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="cliente.h" />
+		<Unit filename="fila.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="fila.h" />
 		<Unit filename="lista.c">
 			<Option compilerVar="CC" />
 		</Unit>

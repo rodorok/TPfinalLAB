@@ -11,9 +11,17 @@ nodo * crearNodoLista (persona cliente)
 {
     nodo * nuevo=(nodo*)malloc(sizeof(nodo));
 
-    nuevo->cliente=cliente;///asignamos los datos pedidos
-    nuevo->siguiente=NULL;
-    nuevo->anterior=NULL;
+    strcpy(nuevo->cliente.apellido, cliente.apellido);///asignamos los valores de p a aux
+    nuevo->cliente.tipoCliente = cliente.tipoCliente;
+    nuevo->cliente.medioPago = cliente.medioPago;
+    nuevo->cliente.cantArticulos = cliente.cantArticulos;
+    nuevo->cliente.tiempoEspera = 0;
+    nuevo->cliente.tiempoProcesado = 0;
+    nuevo->cliente.eliminado = cliente.eliminado;
+
+    ///asignamos los datos pedidos
+    nuevo->siguiente = NULL;
+    nuevo->anterior = NULL;
 
     return nuevo;
 }
@@ -47,9 +55,9 @@ nodo * agregarAlFinal (nodo * lista, nodo * nuevo)
     }
     else///sino buscamos el final de la lista y lo agregamos
     {
-        seg=buscarUltimo(lista);
-        seg->siguiente=nuevo;
-        nuevo->anterior=seg;
+        seg = buscarUltimo(lista);
+        seg->siguiente = nuevo;
+        nuevo->anterior = seg;
     }
     return lista;///devolvemos la lista bien armada
 }

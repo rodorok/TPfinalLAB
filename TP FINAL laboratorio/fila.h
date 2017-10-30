@@ -1,17 +1,25 @@
 #ifndef FILA_H_INCLUDED
 #define FILA_H_INCLUDED
-typedef struct
-{
-    int dato;
-    struct nodo2* siguiente;
-    struct nodo2* anterior;
-} nodo2;
 
-typedef struct
-{
-    struct nodo2* cabecera;
-    struct nodo2* cola;
-} Referencia;
+typedef struct{
+    int nro_de_caja;
+    char nombreCajero[40];
+    int tipo_pago;                 //  1 efectivo, 2 crédito o débito, 3 todos
+    int abiertaOcerrada;
+    char algoritmoPlanificacion[30];  // debe informar que tipo de alg. de planificación utiliza la caja
+    Fila filita ;
+}caja;
+
+typedef struct nodo{
+    caja datos_caja;
+    struct cajero * siguiente;
+    struct cajero * anterior;
+} cajero;
+
+typedef struct{
+    struct caja * cabecera;
+    struct caja * cola;
+}fila;
 
 void inicReferencia(Referencia* fila);
 nodo2* crearNodo(int dato);

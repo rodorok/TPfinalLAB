@@ -3,18 +3,20 @@
 #include <string.h>
 #include "fila.h"
 
-void inicReferencia(Referencia* fila)
-{
-    fila->cabecera=NULL;
-    fila->cola=NULL;
+void inicFila(fila * filita){
+    filita->cabecera=NULL;
+    filita->cola=NULL;
 }
 
-nodo2* crearNodo(int dato)
+caja* crearNodo(caja * cajero)
 {
-    nodo2* aux=(nodo2*)malloc(sizeof(nodo2));
-    aux->anterior=NULL;
-    aux->dato=dato;
-    aux->siguiente=NULL;
+    caja * aux=(caja*)malloc(sizeof(caja));
+
+    aux->nro_de_caja = cajero.datos_caja.nro_de_caja;
+    strcpy(aux->nombreCajero, cajero)
+
+    aux->anterior = NULL;
+    aux->siguiente = NULL;
     return aux;
 }
 
