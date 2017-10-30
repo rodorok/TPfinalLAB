@@ -2,18 +2,21 @@
 #include <stdlib.h>
 #include "cliente.h"
 #include "menus.h"
+#include "arbol.h"
+
 
 
 int main()
 {
-
+    nodoArbol * arbol = inicArbol();
+    char archivitopers[] = {"datos_persona"};
     char opcion;
     do{
         printf("\t\t\t <<< Menu Principal >>>");
         printf("\n\n");
         printf("\n\t 1- Menu Clientes");
         printf("\n\t 2- Menu Cajas");
-        printf("\n\t 2- Menu Procesos");
+        printf("\n\t 3- Menu Procesos");
         printf("\n\n");
         printf("Escape para salir");
         printf("\n\n");
@@ -22,8 +25,7 @@ int main()
        switch(opcion){
             case '1':
                 system("cls");
-
-                cargapersona();
+                cargapersona(archivitopers);
                 printf("\n\n\n");
                 system("cls");
                 break;
@@ -32,7 +34,6 @@ int main()
             case '2':
                 system("cls");
                 menucaja();
-                ///
                 printf("\n\n\n");
                 system("cls");
                 break;
@@ -40,8 +41,7 @@ int main()
 
             case '3':
                   system("cls");
-                  menuprocesos();
-                  ///
+                  menuprocesos(archivitopers,arbol);
                   printf("\n\n\n");
                   system("cls");
                   break;

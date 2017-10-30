@@ -38,3 +38,46 @@
 1509116276 c:\users\maxi\desktop\practica\toledo\lista.h
 	"cliente.h"
 
+1509375960 source:c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\arbol.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"arbol.h"
+
+1509373703 c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\arbol.h
+	"cliente.h"
+
+1509374576 c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\cliente.h
+
+1509374576 source:c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\cliente.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+
+1509373173 source:c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\lista.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+
+1509373173 c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\lista.h
+	"cliente.h"
+
+1509374581 source:c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\main.c
+	<stdio.h>
+	<stdlib.h>
+	"cliente.h"
+	"menus.h"
+	"arbol.h"
+
+1509374477 c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\menus.h
+	"arbol.h"
+
+1509375901 source:c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\menus.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"menus.h"
+	"cliente.h"
+	"arbol.h"
+

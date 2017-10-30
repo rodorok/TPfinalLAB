@@ -20,6 +20,7 @@ nodoArbol * crearNodoArbol(persona a){
 
     aux->izq=NULL;
     aux->der=NULL;
+
     return aux;
 }
 
@@ -36,6 +37,7 @@ nodoArbol * insertar(nodoArbol * arbol, persona a){
             arbol->izq = insertar(arbol->izq, a);
             }
         }
+
     return arbol;
 }
 
@@ -50,10 +52,11 @@ void preorder(nodoArbol * arbol){
 
 void inorder(nodoArbol * arbol){
     if(arbol != NULL){
-        inorder(arbol->izq);
-        printf("%s ", arbol->p.apellido);
 
+        inorder(arbol->izq);
+        printf("\n%s ", arbol->p.apellido);
         inorder(arbol->der);
+
     }
 }
 
@@ -89,3 +92,29 @@ nodoArbol * buscar(nodoArbol * arbol, char nombre[10])
     }
     return rta;
 }
+
+nodoArbol * archivoarbol(char nombre[],nodoArbol * arbol)
+{
+    persona aux;
+    FILE * archi=fopen(nombre,"rb");
+    if (archi==NULL)
+    {
+        printf("No se encontro el archivo\n");
+    }
+    else
+    {
+        while (!feof(archi))
+        {
+            fread(&aux,sizeof(persona),1,archi);
+            if (!feof(archi))
+            {
+                arbol=insertar(arbol,aux);
+
+            }
+        }
+    }
+    fclose(archi);
+
+    return arbol;
+}
+

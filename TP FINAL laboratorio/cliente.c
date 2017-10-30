@@ -3,10 +3,11 @@
 #include <string.h>
 #include "cliente.h"
 
-void cargapersona()
+void cargapersona(char archivitopers[])
 {
     char opcion;
-    char archivitopers[] = {"datos_persona"};
+
+
     int ultiid=0;
     do
     {   system("cls");
@@ -129,7 +130,7 @@ void mostrar(persona pers)
          printf ("\n TIEMPO DE ESPERA :  %d", pers.tiempoEspera);
          printf ("\n TIEMPO DE PROCESADO :  %d", pers.tiempoProcesado);
          verestado(pers);
-         printf("\n\n\n Esc para volver atras.");
+
 }
 void vercliente(persona pers)
 {
