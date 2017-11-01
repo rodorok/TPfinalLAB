@@ -1,6 +1,7 @@
 #ifndef FILA_H_INCLUDED
 #define FILA_H_INCLUDED
-
+#include "cliente.h"
+#include "lista.h"
 typedef struct{
     persona filita;
     struct cajero * siguiente;
@@ -12,15 +13,15 @@ typedef struct{
     struct caja * cola;
 }fila;
 
-void inicReferencia(Referencia* fila);
-nodo2* crearNodo(int dato);
-void mostrarFila(Referencia* fila);
-void agregaPpio(Referencia* fila, nodo2* nuevo);
-int extraer(Referencia* fila);
-void leerFila(Referencia* fila);
-int primero(Referencia* fila);
-int filaVacia(Referencia* fila);
-int capicuaRecursivo(nodo2 * cabeza, nodo2 * cola);
+void inicReferencia(fila* fila);
+nodo* crearNodo(int dato);
+void mostrarFila(fila* fila);
+void agregaPpio(fila* fila, nodo* nuevo);
+int extraer(fila* fila);
+void leerFila(fila* fila);
+int primero(fila* fila);
+int filaVacia(fila* fila);
+int capicuaRecursivo(nodo * cabeza, nodo * cola);
 
 
 #endif // FILA_H_INCLUDED

@@ -8,7 +8,7 @@ void inicFila(fila * filita){
     filita->cola=NULL;
 }
 
-caja* crearNodo(caja * cajero)
+/*caja* crearNodo(caja * cajero)
 {
     caja * aux=(caja*)malloc(sizeof(caja));
 
@@ -18,11 +18,11 @@ caja* crearNodo(caja * cajero)
     aux->anterior = NULL;
     aux->siguiente = NULL;
     return aux;
-}
+}*/
 
-void mostrarFila(Referencia* fila)
+void mostrarFila(fila* fila)
 {
-    nodo2* aux=fila->cabecera;
+    nodo* aux=fila->cabecera;
     printf("\n");
     printf("Principio.......................................Final\n");
     while(aux!=NULL)
@@ -34,7 +34,7 @@ void mostrarFila(Referencia* fila)
 }
 
 // sin uso!
-void agregaPpio(Referencia* fila, nodo2* nuevo)
+void agregaPpio(fila* fila, nodo* nuevo)
 {
     if(fila->cabecera==NULL)
     {
@@ -50,7 +50,7 @@ void agregaPpio(Referencia* fila, nodo2* nuevo)
     }
 }
 
-void agregaFinal(Referencia* fila, nodo2* nuevo)
+void agregaFinal(fila* fila, nodo* nuevo)
 {
     if(fila->cabecera==NULL)
     {
@@ -66,7 +66,7 @@ void agregaFinal(Referencia* fila, nodo2* nuevo)
     }
 }
 
-int extraer(Referencia* fila)
+int extraer(fila* fila)
 {
     int resp;
     if(fila->cabecera!=NULL)
@@ -88,7 +88,7 @@ int extraer(Referencia* fila)
     return resp;
 }
 
-void leerFila(Referencia* fila)
+void leerFila(fila* fila)
 {
     int a;
     printf("Ingrese un valor:");
@@ -97,7 +97,7 @@ void leerFila(Referencia* fila)
     agregaFinal(fila,aux );
 }
 
-int primero(Referencia* fila)
+int primero(fila* fila)
 {
     int resp;
     if(fila->cabecera!=NULL)
@@ -108,7 +108,7 @@ int primero(Referencia* fila)
     return resp;
 }
 
-int filaVacia(Referencia* fila)
+int filaVacia(fila* fila)
 {
     int resp=0;
     if(fila->cabecera==NULL)
@@ -116,7 +116,7 @@ int filaVacia(Referencia* fila)
     return resp;
 }
 
-int capicuaRecursivo(nodo2 * cabeza, nodo2 * cola)
+int capicuaRecursivo(nodo * cabeza, nodo * cola)
 {
     int capicua =0;
 
