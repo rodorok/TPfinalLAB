@@ -15,11 +15,12 @@ typedef struct{
 ///Funciones caja
 
 caja abrirOcerrarCaja (caja c);
-caja buscarCaja(caja A[], int buscar);
+caja buscarCaja(caja c[], int buscar);
 void agregarCajas(caja c[], int val);
 void datosCajas(caja c[], int val);
 void arrayAarchi(caja c[], int val,char archivoCaja[]);
 void mostrarArchivoCaja (char archivoCaja[]);
+void mostrarCaja(caja c);
 
 
 

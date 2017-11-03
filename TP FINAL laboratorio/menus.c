@@ -49,6 +49,14 @@ char opcion;
                     system("cls");
 
                     break;
+            case 53:
+                system("cls");
+                    mostrarArchivoCaja(archivoCaja);
+                    printf("\n\n\n");
+                    system("pause");
+                    system("cls");
+
+                    break;
         } ///switch principal
     }while ( opcion != 27 );  ///FIN DEL DO-WHILE
 }

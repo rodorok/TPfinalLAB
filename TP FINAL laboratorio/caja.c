@@ -5,8 +5,8 @@
 
 ///Funciones Cajas
 
-caja abrirOcerrarCaja (caja c){ ///Funcion que resibe y devuelve, la cierra si esta abierta y visebersa
-    if (c.abiertaOcerrada == 1){
+caja abrirOcerrarCaja(caja c){ ///Funcion que resive y devuelve, la cierra si esta abierta y visebersa
+    if(c.abiertaOcerrada == 1){
         c.abiertaOcerrada = 0;
     }
     else{
@@ -15,14 +15,14 @@ caja abrirOcerrarCaja (caja c){ ///Funcion que resibe y devuelve, la cierra si e
     return c;
 }
 
-caja buscarCaja(caja A[], int buscar){ ///buscamos una caja y la retornamos
+caja buscarCaja(caja c[], int buscar){ ///buscamos una caja y la retornamos
     int i=0;
-    if((A[i].nro_de_caja!=buscar) && (buscar<=8)){
-        while (A[i].nro_de_caja!=buscar){
+    if((c[i].nro_de_caja!=buscar) && (buscar<=8)){
+        while (c[i].nro_de_caja!=buscar){
             i++;
         }
     }
-    return A[i];
+    return c[i];
 }
 
 ///Funciones VOID
@@ -38,23 +38,23 @@ void agregarCajas(caja c[], int val){
 
 void datosCajas(caja c[], int val){
     c[val].nro_de_caja = val+1;
-    printf("\nIngrese Nombre del cajero");
+    printf("\nCaja Numero: [%d]",c[val].nro_de_caja);
+    printf("\nIngrese Nombre del cajero): ");
     fflush(stdin);
     scanf("%s",&c[val].nombreCajero);
-    printf("\nIngrese tipo de pago (1 Efectivo, 2 Credito, 3 Todos");
+    printf("\nIngrese tipo de pago (1 Efectivo, 2 Credito, 3 Todos): ");
     fflush(stdin);
     scanf("%d",&c[val].tipo_pago);
-    printf("\n (1 Abierta, 2 Cerrada");
+    printf("\n (1 Abierta, 2 Cerrada): ");
     fflush(stdin);
     scanf("%d",&c[val].abiertaOcerrada);
-    printf("\nAlgoritmo de Planificacion");
+    printf("\nAlgoritmo de Planificacion: ");
     fflush(stdin);
-    scanf("%c",&c[val].algoritmoPlanificacion);
+    scanf("%s",&c[val].algoritmoPlanificacion);
 }
 
 void arrayAarchi(caja c[], int val,char archivoCaja[]){
     FILE * archi = fopen(archivoCaja, "wb");
-    caja * aux;
     int i = 0;
     while(i < val){
         fwrite(&c[i],sizeof(caja),1,archi);
@@ -62,7 +62,7 @@ void arrayAarchi(caja c[], int val,char archivoCaja[]){
     }
     fclose(archi);
 }
-/*
+
 void mostrarArchivoCaja (char archivoCaja[]){
     FILE * archi = fopen(archivoCaja, "rb");
     caja aux;
@@ -78,8 +78,20 @@ void mostrarArchivoCaja (char archivoCaja[]){
     fclose(archi);
 }
 
-///Funciones int
+void mostrarCaja(caja c){
+    puts("\n-------------------------");
+    printf("\nNumero de caja: %c",c.nro_de_caja);
+    printf("\nNombre del cajero: %s",c.nombreCajero);
+    printf("\nTipo de pago: %d",c.tipo_pago);
+    if(c.abiertaOcerrada == 1){
+        printf("\nCaja = Abierta");
+    }else{
+        printf("\nCaja = Cerrada");
+    }
+}
+/*
 
+///Funciones int
 int ArchivoACajas (char archivoCajas[], caja c[]){
     FILE * archi = fopen(archivoCajas,"rb");
     int i=0;
@@ -94,7 +106,6 @@ int ArchivoACajas (char archivoCajas[], caja c[]){
     fclose(archi);
     return i;
 }
-
 int contarClientesCaja (caja c){
     int cant = 0;
     Fila seg = c.filita;
@@ -108,13 +119,11 @@ int contarClientesCaja (caja c){
     }
     return cant;
 }
-
 int cajasMenorClientela (caja  c[], int tipoPago){ ///Funcion para Buscar caja con menos clientes, dependiendo el tipo de pago.
     int i=0;
     int flag=0;
     int menor=0;
     int posmenor=-1;
-
     while(flag == 0 && i<8){
         if ((c[i].tipo_pago == tipoPago) && (c[i].abiertaOcerrada == 1)){
             flag = 1;
@@ -134,7 +143,6 @@ int cajasMenorClientela (caja  c[], int tipoPago){ ///Funcion para Buscar caja c
     }
     return posmenor;
 }
-
 int agregarClienteACaja (caja c[], nodoArbol * raiz){
     int opcion;
     int cantidadclientes = 0;
