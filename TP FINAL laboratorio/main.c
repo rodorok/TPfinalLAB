@@ -2,10 +2,11 @@
 #include <stdlib.h>
 #include "cliente.h"
 #include "menus.h"
-
+#include "caja.h"
 
 int main()
 {
+    cajas * cajas[8] = {0};
 
     char opcion;
     do{
