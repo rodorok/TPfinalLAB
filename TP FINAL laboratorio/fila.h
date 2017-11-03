@@ -1,26 +1,36 @@
 #ifndef FILA_H_INCLUDED
 #define FILA_H_INCLUDED
+#include "cliente.h"
 
-typedef struct{
-    persona filita;
-    struct cajero * siguiente;
-    struct cajero * anterior;
-}fila_caja;
+typedef struct
+{
+    char apellido[10];
+    int tipoCliente;
+    int medioPago;
+    int cantArticulos;
+    int tiempoEspera;
+    int tiempoProcesado;
+    int eliminado;
+    struct nodo2* siguiente;
+    struct nodo2* anterior;
+} nodo2;
 
-typedef struct{
-    struct caja * cabecera;
-    struct caja * cola;
-}fila;
+typedef struct
+{
+    struct nodo2* cabecera;
+    struct nodo2* cola;
+} Fila;
 
-void inicReferencia(Referencia* fila);
-nodo2* crearNodo(int dato);
-void mostrarFila(Referencia* fila);
-void agregaPpio(Referencia* fila, nodo2* nuevo);
-int extraer(Referencia* fila);
-void leerFila(Referencia* fila);
-int primero(Referencia* fila);
-int filaVacia(Referencia* fila);
-int capicuaRecursivo(nodo2 * cabeza, nodo2 * cola);
+void inicReferencia(Fila* fila);
+nodo2* crearNodo(persona a);
+void mostrarFila(Fila* fila);
+void agregaPpio(Fila* fila, nodo2* nuevo);
+void extraer(Fila* fila);
+void leerFila(Fila* fila);
+int primero(Fila* fila);
+int filaVacia(Fila* fila);
+void agregaFinal(Fila* fila, nodo2* nuevo);
+
 
 
 #endif // FILA_H_INCLUDED
