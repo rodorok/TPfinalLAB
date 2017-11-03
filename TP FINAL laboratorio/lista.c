@@ -4,14 +4,14 @@
 
 nodo * inicLista ()
 {
-    return NULL;///inicializamos la lista en null para no empezar con basura
+    return NULL;
 }
 
 nodo * crearNodoLista (persona cliente)
 {
     nodo * nuevo=(nodo*)malloc(sizeof(nodo));
 
-    strcpy(nuevo->cliente.apellido, cliente.apellido);///asignamos los valores de p a aux
+    strcpy(nuevo->cliente.apellido, cliente.apellido);
     nuevo->cliente.tipoCliente = cliente.tipoCliente;
     nuevo->cliente.medioPago = cliente.medioPago;
     nuevo->cliente.cantArticulos = cliente.cantArticulos;
@@ -28,7 +28,7 @@ nodo * crearNodoLista (persona cliente)
 
 nodo * agregarAlPrincipio (nodo * lista, nodo * nuevo)
 {
-    nuevo->siguiente=lista;///agregamos un nuevo nodo al principio de la lista
+    nuevo->siguiente=lista;
     if(lista!=NULL)
     {
         lista->anterior=nuevo;
@@ -39,8 +39,7 @@ nodo * agregarAlPrincipio (nodo * lista, nodo * nuevo)
 nodo * buscarUltimo (nodo * lista)
 {
     nodo * seg=lista;
-    while (seg->siguiente!=NULL)///mientras la lista tenga datos
-    {///la recorremos y debolvemos el ultimo nodo encontrado
+    while (seg->siguiente!=NULL)
         seg=seg->siguiente;
     }
     return seg;
@@ -51,28 +50,28 @@ nodo * agregarAlFinal (nodo * lista, nodo * nuevo)
     nodo * seg;
     if (lista==NULL)
     {
-        lista=nuevo;///si la lista era NULL agregamos el nuevo dato al principio
+        lista=nuevo;
     }
-    else///sino buscamos el final de la lista y lo agregamos
+    else
     {
         seg = buscarUltimo(lista);
         seg->siguiente = nuevo;
         nuevo->anterior = seg;
     }
-    return lista;///devolvemos la lista bien armada
+    return lista;
 }
 
 nodo * agregarEnOrdenTipoCliente (nodo * lista, nodo * nuevo)
 {
     if (lista==NULL)
     {
-        lista=nuevo;///si no hay clientes se agruega al principio
+        lista=nuevo;
     }
-    else if(nuevo->cliente.tipoCliente <= lista->cliente.tipoCliente)///sino se ira evaluando
-    {///y veremos quien tiene mayor prioridad en la lista
+    else if(nuevo->cliente.tipoCliente <= lista->cliente.tipoCliente)
+    {
         lista=agregarAlPrincipio(lista,nuevo);
     }
-    else///si no puede ir al principio se buscara una posicion adecuada
+    else
     {
         nodo * ante=lista;
         nodo * seg=lista->siguiente;
@@ -91,12 +90,12 @@ nodo * agregarEnOrdenTipoCliente (nodo * lista, nodo * nuevo)
             seg->anterior=nuevo;
         }
     }
-    return lista;///se retorna lista ya que se puede modificar el primero
+    return lista;
 }
 
 nodo * agregarEnOrdenPorCant (nodo * lista, nodo * nuevo)
 {
-    if (lista==NULL)///hacemos el mismo procedimiento pero evaluando la cantidad de articulos
+    if (lista==NULL)
     {
         lista=nuevo;
     }
