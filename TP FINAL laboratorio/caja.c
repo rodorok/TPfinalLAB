@@ -50,7 +50,6 @@ void datosCajas(caja c[], int val){
     printf("\nAlgoritmo de Planificacion");
     fflush(stdin);
     scanf("%c",&c[val].algoritmoPlanificacion);
-    c[val].filita = NULL;
 }
 
 void arrayAarchi(caja c[], int val,char archivoCaja[]){
@@ -63,13 +62,12 @@ void arrayAarchi(caja c[], int val,char archivoCaja[]){
     }
     fclose(archi);
 }
-
+/*
 void mostrarArchivoCaja (char archivoCaja[]){
     FILE * archi = fopen(archivoCaja, "rb");
     caja aux;
     if (archi != NULL){
         while(fread(&aux,sizeof(caja),1,archi) > 0){
-            inicFila(&(aux.filita));
             puts("\n------------------------------------------");
             mostrarCaja(aux);
         }
@@ -79,7 +77,7 @@ void mostrarArchivoCaja (char archivoCaja[]){
     }
     fclose(archi);
 }
-/*
+
 ///Funciones int
 
 int ArchivoACajas (char archivoCajas[], caja c[]){

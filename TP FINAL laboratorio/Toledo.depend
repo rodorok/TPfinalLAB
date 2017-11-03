@@ -86,7 +86,10 @@
 
 1509714044 d:\github\utn\tpfinallab\tp final laboratorio\cliente.h
 
-1509367562 source:d:\github\utn\tpfinallab\tp final laboratorio\lista.c
+1509715113 source:d:\github\utn\tpfinallab\tp final laboratorio\lista.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
 
 1509373173 c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\lista.h
 	"cliente.h"
@@ -96,31 +99,48 @@
 1509116276 d:\github\utn\tpfinallab\tp final laboratorio\lista.h
 	"cliente.h"
 
-1509117779 source:d:\github\utn\tpfinallab\tp final laboratorio\main.c
+1509716221 source:d:\github\utn\tpfinallab\tp final laboratorio\main.c
+	<stdio.h>
+	<stdlib.h>
+	"cliente.h"
+	"menus.h"
+	"caja.h"
+	"arbol.h"
 
 1509374477 c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\menus.h
 	"arbol.h"
 
 1509375901 source:c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\menus.c
 
-1509106813 d:\github\utn\tpfinallab\tp final laboratorio\menus.h
+1509715839 d:\github\utn\tpfinallab\tp final laboratorio\menus.h
+	"arbol.h"
+	"caja.h"
 
-1509117680 source:d:\github\utn\tpfinallab\tp final laboratorio\menus.c
+1509716267 source:d:\github\utn\tpfinallab\tp final laboratorio\menus.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"menus.h"
+	"cliente.h"
+	"arbol.h"
+	"caja.h"
 
 1509117680 
 
-1509305942 source:d:\github\utn\tpfinallab\tp final laboratorio\cliente.c
+1509714044 source:d:\github\utn\tpfinallab\tp final laboratorio\cliente.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"cliente.h"
 
-1509376810 source:d:\github\utn\tpfinallab\tp final laboratorio\caja.c
+1509716253 source:d:\github\utn\tpfinallab\tp final laboratorio\caja.c
+	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"caja.h"
 
-1509376810 d:\github\utn\tpfinallab\tp final laboratorio\caja.h
+1509714992 d:\github\utn\tpfinallab\tp final laboratorio\caja.h
+	"fila.h"
 
 1509376510 source:c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\matriz.c
 	"matriz.h"
@@ -128,4 +148,20 @@
 1509376510 c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\matriz.h
 
 1509376510 source:c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\usuarios.c
+
+1509715619 d:\github\utn\tpfinallab\tp final laboratorio\fila.h
+	"cliente.h"
+
+1509714044 source:d:\github\utn\tpfinallab\tp final laboratorio\fila.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"fila.h"
+
+1509376660 source:d:\github\utn\tpfinallab\tp final laboratorio\matriz.c
+	"matriz.h"
+
+1509376660 d:\github\utn\tpfinallab\tp final laboratorio\matriz.h
+
+1509376660 source:d:\github\utn\tpfinallab\tp final laboratorio\usuarios.c
 

@@ -9,8 +9,10 @@
 
 int main()
 {
+    caja * cajas[8] = {0};
     nodoArbol * arbol = inicArbol();
     char archivitopers[] = {"datos_persona"};
+    char archivoCaja[] = {"archicaja"};
     char opcion;
     do{
         printf("\t\t\t <<< Menu Principal >>>");
@@ -34,7 +36,7 @@ int main()
 
             case '2':
                 system("cls");
-                menucaja();
+                menucaja(cajas,8,archivoCaja);
                 printf("\n\n\n");
                 system("cls");
                 break;

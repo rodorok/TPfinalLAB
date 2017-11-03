@@ -39,7 +39,7 @@ nodo * agregarAlPrincipio (nodo * lista, nodo * nuevo)
 nodo * buscarUltimo (nodo * lista)
 {
     nodo * seg=lista;
-    while (seg->siguiente!=NULL)
+    while (seg->siguiente!=NULL){
         seg=seg->siguiente;
     }
     return seg;

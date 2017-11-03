@@ -1,6 +1,6 @@
 #ifndef CAJA_H_INCLUDED
 #define CAJA_H_INCLUDED
-
+#include "fila.h"
 ///Estructura de caja
 
 typedef struct{
