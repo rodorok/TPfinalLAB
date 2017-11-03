@@ -32,6 +32,6 @@ void dardebaja(char nombarchi []);
 void verestado(persona pers);
 void vercliente(persona pers);
 void modificar_datos_usuario (char nombarchi []);
-void cargapersona();
+void cargapersona(char archivitopers[]);
 
 #endif

@@ -3,38 +3,42 @@
 #include <string.h>
 #include "fila.h"
 
-void inicFila(fila * filita){
-    filita->cabecera=NULL;
-    filita->cola=NULL;
+void inicReferencia(Fila* fila)
+{
+    fila->cabecera=NULL;
+    fila->cola=NULL;
 }
 
-caja* crearNodo(caja * cajero)
+nodo2* crearNodo(persona a)
 {
-    caja * aux=(caja*)malloc(sizeof(caja));
-
-    aux->nro_de_caja = cajero.datos_caja.nro_de_caja;
-    strcpy(aux->nombreCajero, cajero)
-
-    aux->anterior = NULL;
-    aux->siguiente = NULL;
+    nodo2 * aux= (nodo2*)malloc(sizeof(nodo2));
+    strcpy(aux->apellido,a.apellido);///asignamos los valores de p a aux
+    aux->tipoCliente=a.tipoCliente;
+    aux->medioPago=a.medioPago;
+    aux->cantArticulos=a.cantArticulos;
+    aux->tiempoEspera=0;
+    aux->tiempoProcesado=0;
+    aux->eliminado=a.eliminado;
+    aux->anterior=NULL;
+    aux->siguiente=NULL;
     return aux;
 }
 
-void mostrarFila(Referencia* fila)
+void mostrarFila(Fila* fila)
 {
     nodo2* aux=fila->cabecera;
-    printf("\n");
-    printf("Principio.......................................Final\n");
+    printf("Principio...\n");
     while(aux!=NULL)
     {
-        printf("[%d] ", aux->dato);
+        printf("\n\n\nApellido:%s \nMedio de Pago: %d \nCantidad de Articulos: %d ", aux->apellido,aux->medioPago,aux->cantArticulos);
+
         aux=aux->siguiente;
     }
-    printf("\nPrincipio.......................................Final\n");
+    printf("\n\nFINAL...");
+    printf("\n");
 }
-
 // sin uso!
-void agregaPpio(Referencia* fila, nodo2* nuevo)
+void agregaPpio(Fila* fila, nodo2* nuevo)
 {
     if(fila->cabecera==NULL)
     {
@@ -50,7 +54,7 @@ void agregaPpio(Referencia* fila, nodo2* nuevo)
     }
 }
 
-void agregaFinal(Referencia* fila, nodo2* nuevo)
+void agregaFinal(Fila* fila, nodo2* nuevo)
 {
     if(fila->cabecera==NULL)
     {
@@ -66,7 +70,7 @@ void agregaFinal(Referencia* fila, nodo2* nuevo)
     }
 }
 
-int extraer(Referencia* fila)
+void extraer(Fila* fila)
 {
     int resp;
     if(fila->cabecera!=NULL)
@@ -82,62 +86,31 @@ int extraer(Referencia* fila)
             fila->cabecera=NULL;
         }
         fila->cabecera=sig;
-        resp=aux->dato;
+
         free(aux);
     }
-    return resp;
+
 }
 
-void leerFila(Referencia* fila)
+void leerFila(Fila* fila)
 {
-    int a;
-    printf("Ingrese un valor:");
-    scanf("%d", &a);
-    nodo2 * aux = crearNodo(a);
-    agregaFinal(fila,aux );
+    persona aux1;
+    printf("Ingrese apellido:");
+    scanf("%s", &aux1.apellido);
+    printf("\ningrese cant Articulos:");
+    scanf("%d", &aux1.cantArticulos);
+    printf("\nIngrese medio de pago");
+    scanf("%d",&aux1.medioPago);
+    nodo2 * aux = crearNodo(aux1);
+    agregaFinal(fila,aux);
 }
 
-int primero(Referencia* fila)
-{
-    int resp;
-    if(fila->cabecera!=NULL)
-    {
-        nodo2* aux=fila->cabecera;
-        resp=aux->dato;
-    }
-    return resp;
-}
 
-int filaVacia(Referencia* fila)
+
+int filaVacia(Fila* fila)
 {
     int resp=0;
     if(fila->cabecera==NULL)
         resp=1;
     return resp;
-}
-
-int capicuaRecursivo(nodo2 * cabeza, nodo2 * cola)
-{
-    int capicua =0;
-
-    if(cabeza!=NULL && cola!=NULL)
-    {
-        if (cabeza==cola||cabeza->anterior==cola) // si llegue al centro de la fila.. par o impar
-        {
-            capicua=1;
-        }
-        else
-        {
-            if(cabeza->dato==cola->dato)
-            {
-                capicua = capicuaRecursivo(cabeza->siguiente, cola->anterior);
-            }
-            else
-            {
-                capicua=0;
-            }
-        }
-    }
-    return capicua;
-
 }

@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include "menus.h"
+#include "cliente.h"
+#include "arbol.h"
+
 
 int menucaja(){
 char opcion;
@@ -50,7 +53,7 @@ char opcion;
     }while ( opcion != 27 );  ///FIN DEL DO-WHILE
 }
 
-int menuprocesos(){
+int menuprocesos(char archivitopers [],nodoArbol * arbol){
 char opcion;
 
 
@@ -58,28 +61,29 @@ char opcion;
     {   system("cls");
         printf("\t\t\t <<< Menu Procesos >>>");
         printf("\n\n1- Cargar Arbol");
-        printf("\n2- Cargar Filas");
+        printf("\n2- Mostrar Arbol");
         printf("\n3- Diagrama de Flujo");
         printf("\n\n\n ESC para volver atras.");
         opcion=getch();
         switch ( opcion )
         {
             case 49:system("cls");
-                    printf("Abre");
+                     arbol=archivoarbol(archivitopers,arbol);
+                     printf("\t\t ARBOL CARGADO EXITOSAMENTE");
                     printf("\n\n\n");
                     system("pause");
                 system("cls");
                     break;
             case 50:
                     system("cls");
-                    printf("Abre");
+                   inorder(arbol);
                     printf("\n\n\n");
                     system("pause");
                     system("cls");
                     break;
             case 51:
                 system("cls");
-                    printf("Abre");
+                    printf("EXPLOTO EL ARBOL");
                     printf("\n\n\n");
                     system("pause");
                     system("cls");

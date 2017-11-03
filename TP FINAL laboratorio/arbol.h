@@ -15,4 +15,5 @@ void preorder(nodoArbol * arbol);
 void inorder(nodoArbol * arbol);
 void postorder(nodoArbol * arbol);
 nodoArbol * buscar(nodoArbol * arbol, char nombre[10]);
+nodoArbol * archivoarbol(char nombre[],nodoArbol * arbol);
 #endif // ARBOL_H_INCLUDED
