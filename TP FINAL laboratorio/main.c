@@ -2,14 +2,7 @@
 #include <stdlib.h>
 #include "cliente.h"
 #include "menus.h"
-<<<<<<< HEAD
 #include "caja.h"
-
-int main()
-{
-    cajas * cajas[8] = {0};
-
-=======
 #include "arbol.h"
 
 
@@ -18,7 +11,6 @@ int main()
 {
     nodoArbol * arbol = inicArbol();
     char archivitopers[] = {"datos_persona"};
->>>>>>> 1ab0cd4f2394bcec4047504b19bc7f04abfa1e5d
     char opcion;
     do{
         printf("\t\t\t <<< Menu Principal >>>");
