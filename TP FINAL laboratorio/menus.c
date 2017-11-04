@@ -43,7 +43,7 @@ char opcion;
                     break;
             case 52:
                 system("cls");
-                    agregarCajas(cajas,8);
+                    agregarCajas(cajas,8,archivoCaja);
                     printf("\n\n\n");
                     system("pause");
                     system("cls");

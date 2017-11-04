@@ -16,11 +16,15 @@ typedef struct{
 
 caja abrirOcerrarCaja (caja c);
 caja buscarCaja(caja c[], int buscar);
-void agregarCajas(caja c[], int val);
-void datosCajas(caja c[], int val);
+void agregarCajas(caja c[], int val, char archivoCaja[]);
 void arrayAarchi(caja c[], int val,char archivoCaja[]);
 void mostrarArchivoCaja (char archivoCaja[]);
 void mostrarCaja(caja c);
+int ArchivoACajas(char archivoCajas[], caja c[]);
+int contarClientesCaja(caja c);
+int contarClientesCaja(caja c);
+int cajasMenorClientela (caja  c[], int tipoPago);
+
 
 
 

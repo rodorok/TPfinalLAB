@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "caja.h"
+#include "arbol.h"
 
 ///Funciones Cajas
 
@@ -17,8 +18,8 @@ caja abrirOcerrarCaja(caja c){ ///Funcion que resive y devuelve, la cierra si es
 
 caja buscarCaja(caja c[], int buscar){ ///buscamos una caja y la retornamos
     int i=0;
-    if((c[i].nro_de_caja!=buscar) && (buscar<=8)){
-        while (c[i].nro_de_caja!=buscar){
+    if((c[i].nro_de_caja != buscar) && (buscar <= 8)){
+        while (c[i].nro_de_caja != buscar){
             i++;
         }
     }
@@ -27,30 +28,32 @@ caja buscarCaja(caja c[], int buscar){ ///buscamos una caja y la retornamos
 
 ///Funciones VOID
 
-void agregarCajas(caja c[], int val){
+void agregarCajas(caja c[], int val, char archivoCaja[]){
     int i = 0;
-    while(i < val){
+    char option = 's';
+    while(option == 's' && i < val){
+        system("cls");
         puts("\n---------------------------------------");
-        datosCajas(c,i);
+        c[i].nro_de_caja = i+1;
+        printf("\nCaja Numero: [%i]",c[i].nro_de_caja);
+        printf("\nIngrese Nombre del cajero: ");
+        fflush(stdin);
+        gets(c[i].nombreCajero);
+        printf("\nIngrese tipo de pago (1 Efectivo, 2 Credito, 3 Todos): ");
+        fflush(stdin);
+        scanf("%d",&c[i].tipo_pago);
+        printf("\n (1 Abierta, 2 Cerrada): ");
+        fflush(stdin);
+        scanf("%d",&c[i].abiertaOcerrada);
+        printf("\nAlgoritmo de Planificacion: ");
+        fflush(stdin);
+        gets(c[i].algoritmoPlanificacion);
         i++;
+        printf("\nDesea seguir agregando Cajas? (S/N): ");
+        fflush(stdin);
+        scanf("%c",&option);
     }
-}
-
-void datosCajas(caja c[], int val){
-    c[val].nro_de_caja = val+1;
-    printf("\nCaja Numero: [%d]",c[val].nro_de_caja);
-    printf("\nIngrese Nombre del cajero): ");
-    fflush(stdin);
-    scanf("%s",&c[val].nombreCajero);
-    printf("\nIngrese tipo de pago (1 Efectivo, 2 Credito, 3 Todos): ");
-    fflush(stdin);
-    scanf("%d",&c[val].tipo_pago);
-    printf("\n (1 Abierta, 2 Cerrada): ");
-    fflush(stdin);
-    scanf("%d",&c[val].abiertaOcerrada);
-    printf("\nAlgoritmo de Planificacion: ");
-    fflush(stdin);
-    scanf("%s",&c[val].algoritmoPlanificacion);
+    arrayAarchi(c,val,archivoCaja);
 }
 
 void arrayAarchi(caja c[], int val,char archivoCaja[]){
@@ -80,38 +83,39 @@ void mostrarArchivoCaja (char archivoCaja[]){
 
 void mostrarCaja(caja c){
     puts("\n-------------------------");
-    printf("\nNumero de caja: %c",c.nro_de_caja);
+    printf("\nNumero de caja: %i",c.nro_de_caja);
     printf("\nNombre del cajero: %s",c.nombreCajero);
     printf("\nTipo de pago: %d",c.tipo_pago);
     if(c.abiertaOcerrada == 1){
-        printf("\nCaja = Abierta");
+        printf("\nEstado de la caja: Abierta");
     }else{
-        printf("\nCaja = Cerrada");
+        printf("\nEstado de la cada; Cerrada");
     }
 }
-/*
 
 ///Funciones int
-int ArchivoACajas (char archivoCajas[], caja c[]){
+
+int ArchivoACajas(char archivoCajas[], caja c[]){
     FILE * archi = fopen(archivoCajas,"rb");
-    int i=0;
+    int i = 0;
     caja aux;
     if (archi != NULL){
         while (fread(&aux,sizeof(caja),1,archi) > 0){
             c[i] = aux;
-            inicFila(&(c[i].filita));
+            inicReferencia(&c[i].filita);
             i++;
         }
     }
     fclose(archi);
     return i;
 }
-int contarClientesCaja (caja c){
+
+int contarClientesCaja(caja c){
     int cant = 0;
     Fila seg = c.filita;
-    nodo * aux;
+    nodo2 * aux;
     if (filaVacia(&seg) == 1){
-        aux = seg.primero;
+        aux = seg.cabecera;
         while(aux->siguiente != NULL){
             aux = aux->siguiente;
             cant++;
@@ -152,21 +156,22 @@ int agregarClienteACaja (caja c[], nodoArbol * raiz){
     printf("\n[3] Postorden");
     printf("\nIngrese un numero: ");
     scanf("%d", &opcion);
+
     while (opcion > 3 || opcion < 1){
         printf("\nERROR, algoritmo no existente, ingrese nuevamente: ");
         scanf("%d", &opcion);
     }
-    if(recorrido == 1){
-        cantidadclientes = agregarClientePreorden(raiz,c,cantidadclientes);
+    if(opcion == 1){
+//        cantidadclientes = agregarClientePreorden(raiz,c,cantidadclientes);
     }
     else{
-        if (recorrido == 2){
-            cantidadclientes = agregarClienteInorden(raiz,c,cantidadclientes);
+        if (opcion == 2){
+//            cantidadclientes = agregarClienteInorden(raiz,c,cantidadclientes);
         }
         else{
-            cantidadclientes = agregarClientePostorden(raiz,c,cantidadclientes);
+//            cantidadclientes = agregarClientePostorden(raiz,c,cantidadclientes);
         }
     }
     return cantidadclientes;
 }
-*/
+
