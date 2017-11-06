@@ -1,17 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "cliente.h"
 #include "menus.h"
+#include "caja.h"
 #include "arbol.h"
 
-
+void barra(int);
 
 int main()
 {
+    system("color 02");
+    /*barra(100);
+    fflush(stdin);
+    getchar();*/
+
+    caja * cajas[8] = {0};
     nodoArbol * arbol = inicArbol();
     Fila * filatotal;
     inicReferencia(&filatotal);
     char archivitopers[] = {"datos_persona"};
+    char archivoCaja[] = {"archicaja"};
     char opcion;
     do{
         printf("\t\t\t <<< Menu Principal >>>");
@@ -35,7 +44,7 @@ int main()
 
             case '2':
                 system("cls");
-                menucaja();
+                menucaja(cajas,8,archivoCaja);
                 printf("\n\n\n");
                 system("cls");
                 break;
@@ -53,3 +62,17 @@ int main()
 
     return 0;
 }
+
+void barra(int limit)
+{
+     int i;
+     char progress[200]="";
+
+     for(i=0;i<limit;i++)
+     {
+      system("cls");
+      if((i%10)==0) strcat(progress,"=");
+      printf("%s %d  Completado",progress,i+1);
+     }
+}
+

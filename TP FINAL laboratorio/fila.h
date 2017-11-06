@@ -21,8 +21,11 @@ typedef struct
     struct nodo2* cola;
 } Fila;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d8e8f49a180fa75a22c4f36ac35cdb3d116554f8
 void inicReferencia(Fila* fila);
 nodo2* crearNodo(persona a);
 void mostrarFila(Fila* fila);

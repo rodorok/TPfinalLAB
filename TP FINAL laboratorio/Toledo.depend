@@ -51,7 +51,11 @@
 	"fila.h"
 	"cliente.h"
 
-1509116113 source:d:\github\utn\tpfinallab\tp final laboratorio\arbol.c
+1509714044 source:d:\github\utn\tpfinallab\tp final laboratorio\arbol.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"arbol.h"
 
 1509376810 bf5111cf7518db87a0e38c3544b07585247e3
 	<stdio.h>
@@ -87,12 +91,15 @@
 	<stdlib.h>
 	"lista.h"
 
-1509110751 d:\github\utn\tpfinallab\tp final laboratorio\arbol.h
+1509714044 d:\github\utn\tpfinallab\tp final laboratorio\arbol.h
 	"cliente.h"
 
-1509110765 d:\github\utn\tpfinallab\tp final laboratorio\cliente.h
+1509714044 d:\github\utn\tpfinallab\tp final laboratorio\cliente.h
 
-1509367562 source:d:\github\utn\tpfinallab\tp final laboratorio\lista.c
+1509715113 source:d:\github\utn\tpfinallab\tp final laboratorio\lista.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
 
 1509373173 c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\lista.h
 	"cliente.h"
@@ -107,7 +114,14 @@
 1509116276 d:\github\utn\tpfinallab\tp final laboratorio\lista.h
 	"cliente.h"
 
-1509117779 source:d:\github\utn\tpfinallab\tp final laboratorio\main.c
+1509801569 source:d:\github\utn\tpfinallab\tp final laboratorio\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+	"menus.h"
+	"caja.h"
+	"arbol.h"
 
 1509721408 c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\menus.h
 	"arbol.h"
@@ -121,24 +135,36 @@
 	"cliente.h"
 	"arbol.h"
 
-1509106813 d:\github\utn\tpfinallab\tp final laboratorio\menus.h
+1509715839 d:\github\utn\tpfinallab\tp final laboratorio\menus.h
+	"arbol.h"
+	"caja.h"
 
-1509117680 source:d:\github\utn\tpfinallab\tp final laboratorio\menus.c
+1509720498 source:d:\github\utn\tpfinallab\tp final laboratorio\menus.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"menus.h"
+	"cliente.h"
+	"arbol.h"
+	"caja.h"
 
 1509117680 
 
-1509305942 source:d:\github\utn\tpfinallab\tp final laboratorio\cliente.c
+1509714044 source:d:\github\utn\tpfinallab\tp final laboratorio\cliente.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"cliente.h"
 
-1509376810 source:d:\github\utn\tpfinallab\tp final laboratorio\caja.c
+1509803015 source:d:\github\utn\tpfinallab\tp final laboratorio\caja.c
+	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"caja.h"
+	"arbol.h"
 
-1509376810 d:\github\utn\tpfinallab\tp final laboratorio\caja.h
+1509802057 d:\github\utn\tpfinallab\tp final laboratorio\caja.h
+	"fila.h"
 
 1509376510 source:c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\matriz.c
 	"matriz.h"
@@ -147,12 +173,28 @@
 
 1509376510 source:c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\usuarios.c
 
+<<<<<<< HEAD
 1509714312 source:c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\fila.c
+=======
+1509715619 d:\github\utn\tpfinallab\tp final laboratorio\fila.h
+	"cliente.h"
+
+1509714044 source:d:\github\utn\tpfinallab\tp final laboratorio\fila.c
+>>>>>>> d8e8f49a180fa75a22c4f36ac35cdb3d116554f8
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"fila.h"
 
+<<<<<<< HEAD
 1509720404 c:\users\maxi\documents\github\tpfinallab\tp final laboratorio\fila.h
 	"cliente.h"
+=======
+1509376660 source:d:\github\utn\tpfinallab\tp final laboratorio\matriz.c
+	"matriz.h"
+
+1509376660 d:\github\utn\tpfinallab\tp final laboratorio\matriz.h
+
+1509376660 source:d:\github\utn\tpfinallab\tp final laboratorio\usuarios.c
+>>>>>>> d8e8f49a180fa75a22c4f36ac35cdb3d116554f8
 

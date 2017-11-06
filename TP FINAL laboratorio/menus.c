@@ -4,11 +4,10 @@
 #include "menus.h"
 #include "cliente.h"
 #include "arbol.h"
+#include "caja.h"
 
-
-int menucaja(){
+int menucaja(caja * cajas[],int val ,char archivoCaja[]){
 char opcion;
-
 
     do
     {   system("cls");
@@ -16,7 +15,8 @@ char opcion;
         printf("\n1- Abrir Cajas");
         printf("\n2- Cerrar Cajas");
         printf("\n3- Cargar cajas");
-        printf("\n4- ");
+        printf("\n4- Crear Cajas");
+        printf("\n5- Mostrar Cajas");
         printf("\n\n\n ESC para volver atras.");
         opcion=getch();
         switch ( opcion )
@@ -43,7 +43,15 @@ char opcion;
                     break;
             case 52:
                 system("cls");
-                    printf("Abre");
+                    agregarCajas(cajas,8,archivoCaja);
+                    printf("\n\n\n");
+                    system("pause");
+                    system("cls");
+
+                    break;
+            case 53:
+                system("cls");
+                    mostrarArchivoCaja(archivoCaja);
                     printf("\n\n\n");
                     system("pause");
                     system("cls");
