@@ -9,6 +9,8 @@
 int main()
 {
     nodoArbol * arbol = inicArbol();
+    Fila * filatotal;
+    inicReferencia(&filatotal);
     char archivitopers[] = {"datos_persona"};
     char opcion;
     do{
@@ -41,7 +43,7 @@ int main()
 
             case '3':
                   system("cls");
-                  menuprocesos(archivitopers,arbol);
+                  menuprocesos(archivitopers,arbol,&filatotal);
                   printf("\n\n\n");
                   system("cls");
                   break;

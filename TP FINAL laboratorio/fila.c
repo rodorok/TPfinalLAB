@@ -27,10 +27,10 @@ nodo2* crearNodo(persona a)
 void mostrarFila(Fila* fila)
 {
     nodo2* aux=fila->cabecera;
-    printf("Principio...\n");
+    printf("\n\nPrincipio...\n");
     while(aux!=NULL)
     {
-        printf("\n\n\nApellido:%s \nMedio de Pago: %d \nCantidad de Articulos: %d ", aux->apellido,aux->medioPago,aux->cantArticulos);
+        printf("\n\nApellido:%s \nMedio de Pago: %d \nCantidad de Articulos: %d ", aux->apellido,aux->medioPago,aux->cantArticulos);
 
         aux=aux->siguiente;
     }
@@ -54,7 +54,7 @@ void agregaPpio(Fila* fila, nodo2* nuevo)
     }
 }
 
-void agregaFinal(Fila* fila, nodo2* nuevo)
+void agregaFinalF(Fila* fila, nodo2* nuevo)
 {
     if(fila->cabecera==NULL)
     {
@@ -102,7 +102,7 @@ void leerFila(Fila* fila)
     printf("\nIngrese medio de pago");
     scanf("%d",&aux1.medioPago);
     nodo2 * aux = crearNodo(aux1);
-    agregaFinal(fila,aux);
+    agregaFinalF(fila,aux);
 }
 
 

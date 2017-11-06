@@ -53,7 +53,7 @@ char opcion;
     }while ( opcion != 27 );  ///FIN DEL DO-WHILE
 }
 
-int menuprocesos(char archivitopers [],nodoArbol * arbol){
+int menuprocesos(char archivitopers [],nodoArbol * arbol,Fila * filatotal){
 char opcion;
 
 
@@ -62,7 +62,7 @@ char opcion;
         printf("\t\t\t <<< Menu Procesos >>>");
         printf("\n\n1- Cargar Arbol");
         printf("\n2- Mostrar Arbol");
-        printf("\n3- Diagrama de Flujo");
+        printf("\n3- Cargar Filas");
         printf("\n\n\n ESC para volver atras.");
         opcion=getch();
         switch ( opcion )
@@ -76,14 +76,14 @@ char opcion;
                     break;
             case 50:
                     system("cls");
-                   inorder(arbol);
+                   menumostrararbol(arbol);
                     printf("\n\n\n");
                     system("pause");
                     system("cls");
                     break;
             case 51:
                 system("cls");
-                    printf("EXPLOTO EL ARBOL");
+                    menucargafilatotal(arbol,&filatotal);
                     printf("\n\n\n");
                     system("pause");
                     system("cls");
@@ -159,6 +159,89 @@ char opcion;
 
 
                     break;
+        } ///switch principal
+    }while ( opcion != 27 );  ///FIN DEL DO-WHILE
+}
+int menumostrararbol(nodoArbol * arbol){
+char opcion;
+
+
+    do
+    {   system("cls");
+        printf("\n1-Inorder");
+        printf("\n2-Preorder");
+        printf("\n3-Postorder");
+        printf("\n\n\n ESC para volver atras.");
+        opcion=getch();
+        switch ( opcion )
+        {
+            case 49:system("cls");
+                    inorder(arbol);
+                    printf("\n\n\n");
+                    system("pause");
+                system("cls");
+                    break;
+            case 50:
+                    system("cls");
+                    preorder(arbol);
+                    printf("\n\n\n");
+                    system("pause");
+                    system("cls");
+                    break;
+            case 51:
+                    system("cls");
+                    postorder(arbol);
+                    printf("\n\n\n");
+                    system("pause");
+                    system("cls");
+                    break;
+
+
+
+        } ///switch principal
+    }while ( opcion != 27 );  ///FIN DEL DO-WHILE
+}
+int menucargafilatotal(nodoArbol * arbol,Fila ** filatotal){
+char opcion;
+
+
+    do
+    {   system("cls");
+        printf("Como desea agregar?\n\n");
+        printf("\n1-Inorder");
+        printf("\n2-Preorder");
+        printf("\n3-Postorder");
+        printf("\n\n\n ESC para volver atras.");
+        opcion=getch();
+        switch ( opcion )
+        {
+            case 49:system("cls");
+                    system("pause");
+                    agregarinorder(arbol,*filatotal);
+                    printf("\n\nFila cargada exitosamente.\n");
+                    printf("\n\n\n");
+                    system("pause");
+                system("cls");
+                    break;
+            case 50:
+                    system("cls");
+                    agregarpreorder(arbol,*filatotal);
+                    printf("\n\nFila cargada exitosamente.");
+                    printf("\n\n\n");
+                    system("pause");
+                    system("cls");
+                    break;
+            case 51:
+                    system("cls");
+                    agregarpostorder(arbol,*filatotal);
+                    printf("\n\nFila cargada exitosamente.");
+                    printf("\n\n\n");
+                    system("pause");
+                    system("cls");
+                    break;
+
+
+
         } ///switch principal
     }while ( opcion != 27 );  ///FIN DEL DO-WHILE
 }
