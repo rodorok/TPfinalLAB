@@ -51,6 +51,7 @@ void datosCajas(caja c[], int val){
     printf("\nAlgoritmo de Planificacion: ");
     fflush(stdin);
     scanf("%s",&c[val].algoritmoPlanificacion);
+
 }
 
 void arrayAarchi(caja c[], int val,char archivoCaja[]){
