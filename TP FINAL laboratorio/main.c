@@ -17,6 +17,8 @@ int main()
 
     caja * cajas[8] = {0};
     nodoArbol * arbol = inicArbol();
+    Fila * filatotal;
+    inicReferencia(&filatotal);
     char archivitopers[] = {"datos_persona"};
     char archivoCaja[] = {"archicaja"};
     char opcion;
@@ -50,7 +52,7 @@ int main()
 
             case '3':
                   system("cls");
-                  menuprocesos(archivitopers,arbol);
+                  menuprocesos(archivitopers,arbol,&filatotal);
                   printf("\n\n\n");
                   system("cls");
                   break;
