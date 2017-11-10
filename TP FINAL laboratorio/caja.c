@@ -53,7 +53,28 @@ void agregarCajas(caja c[], int val, char archivoCaja[]){
         fflush(stdin);
         scanf("%c",&option);
     }
+<<<<<<< HEAD
+}
+
+void datosCajas(caja c[], int val){
+    c[val].nro_de_caja = val+1;
+    printf("\nCaja Numero: [%d]",c[val].nro_de_caja);
+    printf("\nIngrese Nombre del cajero): ");
+    fflush(stdin);
+    scanf("%s",&c[val].nombreCajero);
+    printf("\nIngrese tipo de pago (1 Efectivo, 2 Credito, 3 Todos): ");
+    fflush(stdin);
+    scanf("%d",&c[val].tipo_pago);
+    printf("\n (1 Abierta, 2 Cerrada): ");
+    fflush(stdin);
+    scanf("%d",&c[val].abiertaOcerrada);
+    printf("\nAlgoritmo de Planificacion: ");
+    fflush(stdin);
+    scanf("%s",&c[val].algoritmoPlanificacion);
+
+=======
     arrayAarchi(c,val,archivoCaja);
+>>>>>>> 50837f2d75ef06b4576a85e6fb455ebf283f8cac
 }
 
 void arrayAarchi(caja c[], int val,char archivoCaja[]){
