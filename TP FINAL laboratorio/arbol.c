@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include "arbol.h"
+#include "fila.h"
+#include "cliente.h"
 
 nodoArbol * inicArbol(){
     return NULL;
@@ -43,10 +45,19 @@ nodoArbol * insertar(nodoArbol * arbol, persona a){
 
 void preorder(nodoArbol * arbol){
     if(arbol != NULL){
-        printf("%s ", arbol->p.apellido);
+        printf("\n%s ", arbol->p.apellido);
 
         preorder(arbol->izq);
         preorder(arbol->der);
+    }
+}
+void agregarpreorder(nodoArbol * arbol, Fila* filita){
+    if(arbol != NULL){
+        persona aux=arbol->p;
+        nodo2*auxlista=crearNodo(aux);
+        agregaFinalF(filita,auxlista);
+        agregarpreorder(arbol->izq,filita);
+        agregarpreorder(arbol->der,filita);
     }
 }
 
@@ -59,12 +70,34 @@ void inorder(nodoArbol * arbol){
 
     }
 }
+void agregarinorder(nodoArbol * arbol,Fila * filita){
+
+    if(arbol != NULL){
+
+         persona aux=arbol->p;
+         nodo2*auxlista=crearNodo(aux);
+        agregarinorder(arbol->izq,filita);
+        agregaFinalF(filita,auxlista);
+        agregarinorder(arbol->der,filita);
+
+    }
+}
 
 void postorder(nodoArbol * arbol){
     if(arbol != NULL){
         postorder(arbol->izq);
         postorder(arbol->der);
-        printf("%s ", arbol->p.apellido);
+        printf("\n%s ", arbol->p.apellido);
+
+    }
+}
+void agregarpostorder(nodoArbol * arbol,Fila * filita){
+    if(arbol != NULL){
+        agregarpostorder(arbol->izq,filita);
+        agregarpostorder(arbol->der,filita);
+         persona aux=arbol->p;
+        nodo2*auxlista=crearNodo(aux);
+        agregaFinalF(filita,auxlista);
 
     }
 }
