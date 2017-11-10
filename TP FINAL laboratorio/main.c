@@ -5,6 +5,7 @@
 #include "menus.h"
 #include "caja.h"
 #include "arbol.h"
+#include "usuarios.h"
 
 void barra(int);
 
@@ -15,12 +16,16 @@ int main()
     fflush(stdin);
     getchar();*/
 
+    usuario admin[15];
     caja * cajas[8] = {0};
     nodoArbol * arbol = inicArbol();
     Fila * filatotal;
-    inicReferencia(&filatotal);
+    inicFila(&filatotal);
     char archivitopers[] = {"datos_persona"};
     char archivoCaja[] = {"archicaja"};
+    char archivoUsuarios[] = {"archiuser"};
+    CrearUsuario(archivoUsuarios);
+    Login(archivoUsuarios);
     char opcion;
     do{
         printf("\t\t\t <<< Menu Principal >>>");

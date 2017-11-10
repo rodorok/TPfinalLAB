@@ -3,7 +3,7 @@
 #include <string.h>
 #include "fila.h"
 
-void inicReferencia(Fila* fila)
+void inicFila(Fila* fila)
 {
     fila->cabecera=NULL;
     fila->cola=NULL;

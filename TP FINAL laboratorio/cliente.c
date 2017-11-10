@@ -182,7 +182,7 @@ void dardebaja(char nombarchi [])
     FILE* fichero ;
     fichero=fopen(nombarchi,"r+b");
     persona pers ; /// creo un nuevo persiente de la estructura persiente
-    printf( "\n ¿Que id queres Modificar?: " );
+    printf( "\nQue id queres Modificar?: " );
     scanf( "%i", &idaux);
     selec=idaux;
     ///Cambia valor de eliminado en el archivo persientes
@@ -203,7 +203,7 @@ void modificar_datos_usuario (char nombarchi [])
     FILE* puntero_afile;
     persona pers;
     puntero_afile = fopen(nombarchi, "r+b");
-    printf( "\n ¿Que id estas buscando?: " );
+    printf( "\nQue id estas buscando?: " );
 	scanf( "%i", &idaux);
 	resultado = fseek(puntero_afile,sizeof(persona)*(idaux-1),0);
 	fread(&pers, sizeof (persona), 1, puntero_afile);

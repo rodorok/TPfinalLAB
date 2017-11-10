@@ -170,6 +170,7 @@ char opcion;
         } ///switch principal
     }while ( opcion != 27 );  ///FIN DEL DO-WHILE
 }
+
 int menumostrararbol(nodoArbol * arbol){
 char opcion;
 
@@ -209,6 +210,7 @@ char opcion;
         } ///switch principal
     }while ( opcion != 27 );  ///FIN DEL DO-WHILE
 }
+
 int menucargafilatotal(nodoArbol * arbol,Fila ** filatotal){
 char opcion;
 

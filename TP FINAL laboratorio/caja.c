@@ -102,7 +102,7 @@ int ArchivoACajas(char archivoCajas[], caja c[]){
     if (archi != NULL){
         while (fread(&aux,sizeof(caja),1,archi) > 0){
             c[i] = aux;
-            inicReferencia(&c[i].filita);
+            inicFila(&c[i].filita);
             i++;
         }
     }
@@ -174,4 +174,3 @@ int agregarClienteACaja (caja c[], nodoArbol * raiz){
     }
     return cantidadclientes;
 }
-

@@ -74,8 +74,8 @@ void agregarinorder(nodoArbol * arbol,Fila * filita){
 
     if(arbol != NULL){
 
-         persona aux=arbol->p;
-         nodo2*auxlista=crearNodo(aux);
+        persona aux=arbol->p;
+        nodo2*auxlista=crearNodo(aux);
         agregarinorder(arbol->izq,filita);
         agregaFinalF(filita,auxlista);
         agregarinorder(arbol->der,filita);
